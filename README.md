@@ -27,3 +27,6 @@ R script to analyze 16s amplicon data and make plots
 
 - CRUSADE.batchfile  
 Batchfile used to run mothur commands. Corresponds with the logfile within the data folder
+
+-script.m
+Matlab script to analyze fluorescence spectroscopy data from aqualog fluorescent spectrometer
