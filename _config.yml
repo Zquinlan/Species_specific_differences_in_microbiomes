@@ -1,3 +1,147 @@
-theme: jekyll-theme-minimal
-logo: https://lh3.googleusercontent.com/RD0ErQuJ64dlWqhBNoTBGx6xfVouzwrq4frafPuj_coD2SgfBmNmWfxl_C4IYUcSM0vCR9c1bU0OMHxXVv8tpQO0aulv9aSNh5TQUBZE-xnu7TwL2w-4IrpmtFmAiKUcCMF4sPvZ4hpqjHL263RK0odD8_nt_OqT9-SO7y5ASspQWJqyuaDEnVUjKEx1vvTD4BS4WFLDJ3xc2XcjrVIte5sKA7Bfr9YT_ql7uxETKv440ItXq1ZaWp22YqgGwU-vM6gAjlJWS1zW_xP9Y1zHqeTglynzxr1s0xVEnmf1SNnShKM5pA90r-Cu-3bVyGUOyD6uKFLK7dO_ApDT3ZIuiRf8iu-PcyAj2ftBgTJtzZEqFgoZxUxRicQeV4zKKS3zUKT_RbkcSBbPn8VDdvRsYzuF8AAYQEwnBUm0YlSVBUNwH7Ddq84HmRySvfSD9aabeG_gzQNA6Lh437aj5X0dldLyMoX1F5DZRHio3UMq5MgGyS1vSHBlBPfIJbzg_PWsruocEQxMfpYF0nIIWMtecBArmIVeOZ8nvfRk8gMuNl6hJ7hHTNJ8OeSf_Yc_hq1Z2pUBsvoXHILJgrNkT8hegx5k_kn-TtWmBq7n4pJuAhFQ-lgC3R_GyWxLA9Z6x8Id13VfpBlRgRHcnFe5vCeNPK4D0sHGIi2_cmpPSpYVxzU553QUGrkifik=w2398-h1800-no
-title: Species-specific differences in the microbiomes and organic exudates of crustose coralline algae influence bacterioplankton communities
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# -----------------------------------------------------------------------------
+#  User configuration
+# -----------------------------------------------------------------------------
+
+title:               Species-specific differences in the microbiomes and organic exudates of crustose coralline algae influence bacterioplankton communities
+
+# The unique resource location of your page.
+# Set to `https://<username>.github.io` when hosting on GitHub Pages
+url:                 https://zquinlan.github.io
+
+# Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
+# Set to '/<reponame>' when using the `gh-pages` branch of a repository
+baseurl:             /Species_specific_differences_in_microbiomes
+
+# A very short description of your page
+tagline:             A comparison of two species for Crustose Coralline Algae (CCA).
+
+# A short description of the page, used in the sidebar and as fallback for the meta description tag.
+# Markdown enabled, but don't use more than one paragraph (enforced by `>`)
+description:         >
+  A comparison of two species for Crustose Coralline Algae (CCA). An anlysis of their produced chemicals and facilitated microbial communities [DOI: 10.3389/fmicb.2019.02397](https://www.frontiersin.org/articles/10.3389/fmicb.2019.02397/full).
+# This should be the same author as first entry in `_data/authors.yml`
+author:
+  name:              Zachary Quinlan
+  email:             zquinlan@gmail.com
+
+# Fallback image and color (note you can have a page specific sidebar image and color from yml)
+image:               https://lh3.googleusercontent.com/RD0ErQuJ64dlWqhBNoTBGx6xfVouzwrq4frafPuj_coD2SgfBmNmWfxl_C4IYUcSM0vCR9c1bU0OMHxXVv8tpQO0aulv9aSNh5TQUBZE-xnu7TwL2w-4IrpmtFmAiKUcCMF4sPvZ4hpqjHL263RK0odD8_nt_OqT9-SO7y5ASspQWJqyuaDEnVUjKEx1vvTD4BS4WFLDJ3xc2XcjrVIte5sKA7Bfr9YT_ql7uxETKv440ItXq1ZaWp22YqgGwU-vM6gAjlJWS1zW_xP9Y1zHqeTglynzxr1s0xVEnmf1SNnShKM5pA90r-Cu-3bVyGUOyD6uKFLK7dO_ApDT3ZIuiRf8iu-PcyAj2ftBgTJtzZEqFgoZxUxRicQeV4zKKS3zUKT_RbkcSBbPn8VDdvRsYzuF8AAYQEwnBUm0YlSVBUNwH7Ddq84HmRySvfSD9aabeG_gzQNA6Lh437aj5X0dldLyMoX1F5DZRHio3UMq5MgGyS1vSHBlBPfIJbzg_PWsruocEQxMfpYF0nIIWMtecBArmIVeOZ8nvfRk8gMuNl6hJ7hHTNJ8OeSf_Yc_hq1Z2pUBsvoXHILJgrNkT8hegx5k_kn-TtWmBq7n4pJuAhFQ-lgC3R_GyWxLA9Z6x8Id13VfpBlRgRHcnFe5vCeNPK4D0sHGIi2_cmpPSpYVxzU553QUGrkifik=w2398-h1800-no
+##-image: '{{ baseurl }}/assets/img/dna.jpg'
+color:               '#4f86aa'
+
+# The font used for headings. Expects a string that is a valid CSS font-family value.
+font_heading:        "'Roboto Slab', Helvetica, Arial, sans-serif"
+
+# The text font. Expects a string that is a valid CSS font-family value.
+font:                "'Noto Sans', Helvetica, Arial, sans-serif"
+
+# The string encoding what fonts to fetch from Google Fonts.
+# See: https://qwtel.com/hydejack/docs/configuration/
+google_fonts:        Roboto+Slab:700|Noto+Sans:400,400i,700,700i
+
+# If you do not use a Google Fonts, uncomment the line below
+# no_google_fonts:     true
+
+# Set your Google Analytics id to receive `pageview` events.
+# To remove Google Anaylics from your page, remove the line below.
+##-google_analytics:    <UA-XXXXXXXX-X>
+
+# Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
+disqus_shortname:    cca_species_specific_differences
+
+# This text will appear in the footer of every page. Markdown enabled.
+copyright:           '&copy; 2019 [Zachary A. Quinlan](). All rights reserved.'
+
+# Format of the permalinks
+permalink:           pretty
+
+# Pagination configuration (used by the `blog` layout)
+##--## paginate:            5
+##--## paginate_path:       '/page-:num/'
+
+# If you are upgrading form a v5 verison of Hydejack, uncomment the two lines below,
+# so that the location of the feed XML stays the same.
+# feed:
+#   path:              atom.xml
+
+# Set to true when building with the `--lsi` option
+# See: https://jekyllrb.com/docs/variables/#site-variables
+# use_lsi:             true
+
+# Set to `true` if you don't want to show an icon after each link that opens to an external site
+# no_mark_external:    true
+
+# Uncomment this line if third party plugins fail to work with dynimically loaded pages
+# disable_push_state:  true
+
+# Uncomment this line if want to disable the touch drawer on mobile
+# disable_drawer: true
+
+# -----------------------------------------------------------------------------
+#  Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  featured_categories:
+    permalink:       /category/:name/
+    output:          true
+  featured_tags:
+    permalink:       /tag/:name/
+    output:          true
+  projects:
+    permalink:       /projects/:path/
+    output:          true
+
+# -----------------------------------------------------------------------------
+#  Advanced configuration
+# -----------------------------------------------------------------------------
+
+plugins:
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+
+kramdown:
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+  math_engine:       mathjax
+  math_engine_opts:
+    preview:         true
+    preview_as_code: true
+
+compress_html:
+  comments:          ["<!-- ", " -->"]
+  clippings:         all
+  endings:           all
+  ignore:
+    envs:            [development]
+
+sass:
+  style:             compressed
