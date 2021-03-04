@@ -1,0 +1,1932 @@
+Mac version
+
+Using ReadLine
+
+Running 64Bit Version
+
+mothur v.1.39.5
+Last updated: 3/20/2017
+
+by
+Patrick D. Schloss
+
+Department of Microbiology & Immunology
+University of Michigan
+http://www.mothur.org
+
+When using, please cite:
+Schloss, P.D., et al., Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol, 2009. 75(23):7537-41.
+
+Distributed under the GNU General Public License
+
+Type 'help()' for information on the commands that are available
+
+For questions and analysis support, please visit our forum at https://www.mothur.org/forum
+
+Type 'quit()' to exit program
+Batch Mode
+
+
+mothur > make.contigs(ffastq=Undetermined_S0_L001_R1_001.fastq,rfastq=Undetermined_S0_L001_R2_001.fastq,findex=Undetermined_S0_L001_I1_001.fastq,rindex=Undetermined_S0_L001_I2_001.fastq,oligos=CRUSADE.oligos.FEB2018Updated.txt,bdiffs=1,checkorient=t,processors=3)
+
+Using 3 processors.
+Making contigs...
+Done.
+It took 24073 secs to process 19068780 sequences.
+
+Group count: 
+CC_1F_T3_CCA	100820
+CC_1F_T3_FLT	13737
+CC_1U_T3_FLT	10419
+CC_2F_T3_CCA	52334
+CC_2F_T3_FLT	62418
+CC_2U_T3_FLT	43373
+CC_3F_T3_CCA	33726
+CC_3F_T3_FLT	18042
+CC_3U_T3_FLT	19618
+CH_1F_T3_FLT	7112
+CH_1U_T3_FLT	10072
+CH_2F_T3_FLT	50941
+CH_2U_T3_FLT	26341
+CH_3F_T3_FLT	6498
+CH_3U_T3_FLT	13293
+HR_1F_T3_CCA	50199
+HR_1F_T3_FLT	14272
+HR_1U_T3_FLT	9885
+HR_2F_T3_CCA	51183
+HR_2F_T3_FLT	21350
+HR_2U_T3_FLT	13785
+HR_3F_T3_CCA	66720
+HR_3F_T3_FLT	61067
+HR_3U_T3_FLT	17689
+PO_1F_T3_CCA	66208
+PO_1F_T3_FLT	20578
+PO_1U_T3_FLT	15336
+PO_2F_T3_CCA	62289
+PO_2F_T3_FLT	22300
+PO_2U_T3_FLT	20732
+PO_3F_T3_CCA	68860
+PO_3F_T3_FLT	27148
+PO_3U_T3_FLT	21794
+ST_1F_T1_FLT	70967
+ST_2F_T1_FLT	85231
+ST_3F_T1_FLT	50654
+
+Total of all groups is 1306991
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.fasta
+Undetermined_S0_L001_R1_001.scrap.contigs.fasta
+Undetermined_S0_L001_R1_001.trim.contigs.qual
+Undetermined_S0_L001_R1_001.scrap.contigs.qual
+Undetermined_S0_L001_R1_001.contigs.report
+Undetermined_S0_L001_R1_001.contigs.groups
+
+[WARNING]: your sequence names contained ':'.  I changed them to '_' to avoid problems in your downstream analysis.
+
+mothur > screen.seqs(fasta=current,group=current,optimize=minoverlap-mismatches,criteria=95,contigsreport=current)
+Using Undetermined_S0_L001_R1_001.contigs.report as input file for the contigsreport parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.contigs.groups as input file for the group parameter.
+
+Using 3 processors.
+Optimizing minoverlap to 5.
+Optimizing mismatches to 50.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.contigs.good.contigs.report
+Undetermined_S0_L001_R1_001.trim.contigs.good.fasta
+Undetermined_S0_L001_R1_001.trim.contigs.bad.accnos
+Undetermined_S0_L001_R1_001.contigs.good.groups
+
+
+It took 87 secs to screen 1306991 sequences.
+
+mothur > get.current()
+
+Current RAM usage: 0.166286 Gigabytes. Total Ram: 8 Gigabytes.
+
+Current files saved by mothur:
+fasta=Undetermined_S0_L001_R1_001.trim.contigs.good.fasta
+group=Undetermined_S0_L001_R1_001.contigs.good.groups
+oligos=CRUSADE.oligos.FEB2018Updated.txt
+qfile=Undetermined_S0_L001_R1_001.trim.contigs.qual
+contigsreport=Undetermined_S0_L001_R1_001.contigs.report
+processors=3
+
+Current default directory saved by mothur: /Users/ZachQuinlan/Documents/mothur/mothur/
+
+Current working directory: /Users/ZachQuinlan/Documents/CRUSADE_sequencing/
+
+Output File Names: 
+current_files.summary
+
+
+mothur > summary.seqs(fasta=current,processors=3)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.fasta as input file for the fasta parameter.
+
+Using 3 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	301	301	0	3	1
+2.5%-tile:	1	401	401	0	4	29472
+25%-tile:	1	404	404	0	5	294713
+Median: 	1	426	426	1	5	589425
+75%-tile:	1	513	513	4	8	884137
+97.5%-tile:	1	593	593	15	18	1149378
+Maximum:	1	596	596	41	295	1178849
+Mean:	1	453.403	453.403	3.04918	7.35332
+# of Seqs:	1178849
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.summary
+
+It took 28 secs to summarize 1178849 sequences.
+
+mothur > screen.seqs(fasta=current,group=current,maxambig=2,maxhomop=10,minlength=400,optimize=maxlength, criteria=95,summary=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.contigs.good.groups as input file for the group parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.summary as input file for the summary parameter.
+
+Using 3 processors.
+Optimizing maxlength to 590.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.fasta
+Undetermined_S0_L001_R1_001.trim.contigs.good.bad.accnos
+Undetermined_S0_L001_R1_001.contigs.good.good.groups
+
+
+It took 58 secs to screen 1178849 sequences.
+
+mothur > summary.seqs(fasta=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.fasta as input file for the fasta parameter.
+
+Using 3 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	400	400	0	3	1
+2.5%-tile:	1	402	402	0	4	16012
+25%-tile:	1	402	402	0	5	160113
+Median: 	1	405	405	0	5	320226
+75%-tile:	1	427	427	1	5	480338
+97.5%-tile:	1	429	429	2	7	624439
+Maximum:	1	590	590	2	10	640450
+Mean:	1	416.888	416.888	0.448407	5.15854
+# of Seqs:	640450
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.summary
+
+It took 15 secs to summarize 640450 sequences.
+
+mothur > unique.seqs(fasta=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.fasta as input file for the fasta parameter.
+640450	418032
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.names
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.fasta
+
+
+mothur > summary.seqs(fasta=current,name=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.names as input file for the name parameter.
+
+Using 3 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	1	400	400	0	3	1
+2.5%-tile:	1	402	402	0	4	16012
+25%-tile:	1	402	402	0	5	160113
+Median: 	1	405	405	0	5	320226
+75%-tile:	1	427	427	1	5	480338
+97.5%-tile:	1	429	429	2	7	624439
+Maximum:	1	590	590	2	10	640450
+Mean:	1	416.888	416.888	0.448407	5.15854
+# of unique seqs:	418032
+total # of seqs:	640450
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.summary
+
+It took 11 secs to summarize 640450 sequences.
+
+mothur > count.groups(group=current)
+Using Undetermined_S0_L001_R1_001.contigs.good.good.groups as input file for the group parameter.
+CC_1F_T3_CCA contains 25418.
+CC_1F_T3_FLT contains 8694.
+CC_1U_T3_FLT contains 6518.
+CC_2F_T3_CCA contains 35740.
+CC_2F_T3_FLT contains 2147.
+CC_2U_T3_FLT contains 2392.
+CC_3F_T3_CCA contains 22078.
+CC_3F_T3_FLT contains 6991.
+CC_3U_T3_FLT contains 11716.
+CH_1F_T3_FLT contains 2819.
+CH_1U_T3_FLT contains 6235.
+CH_2F_T3_FLT contains 1493.
+CH_2U_T3_FLT contains 3628.
+CH_3F_T3_FLT contains 719.
+CH_3U_T3_FLT contains 8555.
+HR_1F_T3_CCA contains 33946.
+HR_1F_T3_FLT contains 9537.
+HR_1U_T3_FLT contains 4260.
+HR_2F_T3_CCA contains 33806.
+HR_2F_T3_FLT contains 14262.
+HR_2U_T3_FLT contains 9232.
+HR_3F_T3_CCA contains 42574.
+HR_3F_T3_FLT contains 4332.
+HR_3U_T3_FLT contains 10912.
+PO_1F_T3_CCA contains 46243.
+PO_1F_T3_FLT contains 12974.
+PO_1U_T3_FLT contains 10697.
+PO_2F_T3_CCA contains 43064.
+PO_2F_T3_FLT contains 13716.
+PO_2U_T3_FLT contains 14514.
+PO_3F_T3_CCA contains 47881.
+PO_3F_T3_FLT contains 18542.
+PO_3U_T3_FLT contains 14536.
+ST_1F_T1_FLT contains 46771.
+ST_2F_T1_FLT contains 29011.
+ST_3F_T1_FLT contains 34497.
+
+Total seqs: 640450.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.contigs.good.good.count.summary
+
+
+mothur > align.seqs(fasta=current,reference=SILVA.SEED.FULL.LTP.May2014.fasta,processors=3,flip=t)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.fasta as input file for the fasta parameter.
+
+Using 3 processors.
+
+Reading in the SILVA.SEED.FULL.LTP.May2014.fasta template sequences...	DONE.
+It took 17 to read  56627 sequences.
+Aligning sequences from Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.fasta ...
+[WARNING]: Some of your sequences generated alignments that eliminated too many bases, a list is provided in Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.flip.accnos. If the reverse compliment proved to be better it was reported.
+It took 4332 secs to align 418032 sequences.
+
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.align
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.align.report
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.flip.accnos
+
+
+mothur > filter.seqs(fasta=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.align as input file for the fasta parameter.
+
+Using 3 processors.
+Creating Filter... 
+
+
+Running Filter... 
+
+
+
+Length of filtered alignment: 3584
+Number of columns removed: 5595
+Length of the original alignment: 9179
+Number of sequences used to construct filter: 418032
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.filter
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.fasta
+
+
+mothur > summary.seqs(fasta=current,name=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.names as input file for the name parameter.
+
+Using 3 processors.
+
+		Start	End	NBases	Ambigs	Polymer	NumSeqs
+Minimum:	0	0	0	0	1	1
+2.5%-tile:	1073	2424	401	0	4	16012
+25%-tile:	1073	2424	402	0	5	160113
+Median: 	1073	2424	405	0	5	320226
+75%-tile:	1073	2424	427	1	5	480338
+97.5%-tile:	1073	2424	428	2	7	624439
+Maximum:	3584	3584	590	2	10	640450
+Mean:	1086.74	2420.18	408.529	0.441149	5.05742
+# of unique seqs:	418032
+total # of seqs:	640450
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.summary
+
+It took 27 secs to summarize 640450 sequences.
+
+mothur > screen.seqs(fasta=current,name=current,group=current,optimize=start-end,criteria=99,summary=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.contigs.good.good.groups as input file for the group parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.names as input file for the name parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.summary as input file for the summary parameter.
+
+Using 3 processors.
+Optimizing start to 1136.
+Optimizing end to 2424.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.fasta
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.bad.accnos
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.good.names
+Undetermined_S0_L001_R1_001.contigs.good.good.good.groups
+
+
+It took 65 secs to screen 418032 sequences.
+
+mothur > count.groups(group=current)
+Using Undetermined_S0_L001_R1_001.contigs.good.good.good.groups as input file for the group parameter.
+CC_1F_T3_CCA contains 24408.
+CC_1F_T3_FLT contains 8634.
+CC_1U_T3_FLT contains 6443.
+CC_2F_T3_CCA contains 35593.
+CC_2F_T3_FLT contains 456.
+CC_2U_T3_FLT contains 1242.
+CC_3F_T3_CCA contains 21967.
+CC_3F_T3_FLT contains 5825.
+CC_3U_T3_FLT contains 11330.
+CH_1F_T3_FLT contains 2106.
+CH_1U_T3_FLT contains 5965.
+CH_2F_T3_FLT contains 809.
+CH_2U_T3_FLT contains 3066.
+CH_3F_T3_FLT contains 618.
+CH_3U_T3_FLT contains 8485.
+HR_1F_T3_CCA contains 33831.
+HR_1F_T3_FLT contains 9485.
+HR_1U_T3_FLT contains 4187.
+HR_2F_T3_CCA contains 33688.
+HR_2F_T3_FLT contains 14165.
+HR_2U_T3_FLT contains 9160.
+HR_3F_T3_CCA contains 42329.
+HR_3F_T3_FLT contains 3732.
+HR_3U_T3_FLT contains 10861.
+PO_1F_T3_CCA contains 46150.
+PO_1F_T3_FLT contains 12872.
+PO_1U_T3_FLT contains 10661.
+PO_2F_T3_CCA contains 42925.
+PO_2F_T3_FLT contains 13628.
+PO_2U_T3_FLT contains 14457.
+PO_3F_T3_CCA contains 47722.
+PO_3F_T3_FLT contains 18428.
+PO_3U_T3_FLT contains 14478.
+ST_1F_T1_FLT contains 46142.
+ST_2F_T1_FLT contains 28339.
+ST_3F_T1_FLT contains 34309.
+
+Total seqs: 628496.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.contigs.good.good.good.count.summary
+
+
+mothur > pre.cluster(fasta=current,name=current,group=current,diffs=2,processors=3)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.contigs.good.good.good.groups as input file for the group parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.good.names as input file for the name parameter.
+
+Using 3 processors.
+
+Processing group CH_2U_T3_FLT:
+
+Using 3 processors.
+
+Processing group CC_1F_T3_CCA:
+
+Using 3 processors.
+
+Processing group PO_1F_T3_CCA:
+2389	1224	1165
+Total number of sequences before pre.cluster was 2389.
+pre.cluster removed 1165 sequences.
+
+It took 2 secs to cluster 2389 sequences.
+
+Processing group CH_3F_T3_FLT:
+478	260	218
+Total number of sequences before pre.cluster was 478.
+pre.cluster removed 218 sequences.
+
+It took 0 secs to cluster 478 sequences.
+
+Processing group CH_3U_T3_FLT:
+6081	2721	3360
+Total number of sequences before pre.cluster was 6081.
+pre.cluster removed 3360 sequences.
+
+It took 6 secs to cluster 6081 sequences.
+
+Processing group HR_1F_T3_CCA:
+22813	12581	10232
+Total number of sequences before pre.cluster was 22813.
+pre.cluster removed 10232 sequences.
+
+It took 85 secs to cluster 22813 sequences.
+
+Processing group HR_1F_T3_FLT:
+6910	3451	3459
+Total number of sequences before pre.cluster was 6910.
+pre.cluster removed 3459 sequences.
+
+It took 12 secs to cluster 6910 sequences.
+
+Processing group HR_1U_T3_FLT:
+3188	1566	1622
+Total number of sequences before pre.cluster was 3188.
+pre.cluster removed 1622 sequences.
+
+It took 3 secs to cluster 3188 sequences.
+
+Processing group HR_2F_T3_CCA:
+Total number of sequences before pre.cluster was 25100.
+pre.cluster removed 12705 sequences.
+
+It took 121 secs to cluster 25100 sequences.
+
+Processing group PO_1F_T3_FLT:
+19734	12052	7682
+Total number of sequences before pre.cluster was 19734.
+pre.cluster removed 7682 sequences.
+
+It took 128 secs to cluster 19734 sequences.
+
+Processing group CC_1F_T3_FLT:
+6415	3182	3233
+Total number of sequences before pre.cluster was 6415.
+pre.cluster removed 3233 sequences.
+
+It took 10 secs to cluster 6415 sequences.
+
+Processing group CC_1U_T3_FLT:
+4891	2417	2474
+Total number of sequences before pre.cluster was 4891.
+pre.cluster removed 2474 sequences.
+
+It took 5 secs to cluster 4891 sequences.
+
+Processing group CC_2F_T3_CCA:
+9692	4931	4761
+Total number of sequences before pre.cluster was 9692.
+pre.cluster removed 4761 sequences.
+
+It took 23 secs to cluster 9692 sequences.
+
+Processing group PO_1U_T3_FLT:
+8178	4443	3735
+Total number of sequences before pre.cluster was 8178.
+pre.cluster removed 3735 sequences.
+
+It took 19 secs to cluster 8178 sequences.
+
+Processing group PO_2F_T3_CCA:
+21885	12495	9390
+Total number of sequences before pre.cluster was 21885.
+pre.cluster removed 9390 sequences.
+
+It took 121 secs to cluster 21885 sequences.
+
+Processing group HR_2F_T3_FLT:
+9999	4866	5133
+Total number of sequences before pre.cluster was 9999.
+pre.cluster removed 5133 sequences.
+
+It took 22 secs to cluster 9999 sequences.
+
+Processing group HR_2U_T3_FLT:
+7042	3605	3437
+Total number of sequences before pre.cluster was 7042.
+pre.cluster removed 3437 sequences.
+
+It took 12 secs to cluster 7042 sequences.
+
+Processing group HR_3F_T3_CCA:
+29742	15911	13831
+Total number of sequences before pre.cluster was 29742.
+pre.cluster removed 13831 sequences.
+
+It took 140 secs to cluster 29742 sequences.
+
+Processing group PO_2F_T3_FLT:
+10221	4985	5236
+Total number of sequences before pre.cluster was 10221.
+pre.cluster removed 5236 sequences.
+
+It took 24 secs to cluster 10221 sequences.
+
+Processing group PO_2U_T3_FLT:
+11170	5995	5175
+Total number of sequences before pre.cluster was 11170.
+pre.cluster removed 5175 sequences.
+
+It took 33 secs to cluster 11170 sequences.
+
+Processing group PO_3F_T3_CCA:
+28149	16773	11376
+Total number of sequences before pre.cluster was 28149.
+pre.cluster removed 11376 sequences.
+
+It took 229 secs to cluster 28149 sequences.
+
+Processing group CC_2F_T3_FLT:
+418	317	101
+Total number of sequences before pre.cluster was 418.
+pre.cluster removed 101 sequences.
+
+It took 1 secs to cluster 418 sequences.
+
+Processing group CC_2U_T3_FLT:
+1041	676	365
+Total number of sequences before pre.cluster was 1041.
+pre.cluster removed 365 sequences.
+
+It took 0 secs to cluster 1041 sequences.
+
+Processing group CC_3F_T3_CCA:
+29558	16317	13241
+Total number of sequences before pre.cluster was 29558.
+pre.cluster removed 13241 sequences.
+
+It took 204 secs to cluster 29558 sequences.
+
+Processing group HR_3F_T3_FLT:
+2835	1511	1324
+Total number of sequences before pre.cluster was 2835.
+pre.cluster removed 1324 sequences.
+
+It took 3 secs to cluster 2835 sequences.
+
+Processing group HR_3U_T3_FLT:
+17796	11228	6568
+Total number of sequences before pre.cluster was 17796.
+pre.cluster removed 6568 sequences.
+
+It took 103 secs to cluster 17796 sequences.
+
+Processing group CC_3F_T3_FLT:
+4351	2123	2228
+Total number of sequences before pre.cluster was 4351.
+pre.cluster removed 2228 sequences.
+
+It took 7 secs to cluster 4351 sequences.
+
+Processing group CC_3U_T3_FLT:
+8449	4110	4339
+Total number of sequences before pre.cluster was 8449.
+pre.cluster removed 4339 sequences.
+
+It took 15 secs to cluster 8449 sequences.
+8323	4053	4270
+Total number of sequences before pre.cluster was 8323.
+pre.cluster removed 4270 sequences.
+
+It took 14 secs to cluster 8323 sequences.
+
+Processing group CH_1F_T3_FLT:
+1597	741	856
+Total number of sequences before pre.cluster was 1597.
+pre.cluster removed 856 sequences.
+
+It took 1 secs to cluster 1597 sequences.
+
+Processing group CH_1U_T3_FLT:
+4562	2253	2309
+Total number of sequences before pre.cluster was 4562.
+pre.cluster removed 2309 sequences.
+
+It took 4 secs to cluster 4562 sequences.
+
+Processing group CH_2F_T3_FLT:
+687	430	257
+Total number of sequences before pre.cluster was 687.
+pre.cluster removed 257 sequences.
+
+It took 1 secs to cluster 687 sequences.
+32794	16322	16472
+Total number of sequences before pre.cluster was 32794.
+pre.cluster removed 16472 sequences.
+
+It took 201 secs to cluster 32794 sequences.
+
+Processing group PO_3F_T3_FLT:
+13957	7212	6745
+Total number of sequences before pre.cluster was 13957.
+pre.cluster removed 6745 sequences.
+
+It took 31 secs to cluster 13957 sequences.
+
+Processing group PO_3U_T3_FLT:
+11484	6168	5316
+Total number of sequences before pre.cluster was 11484.
+pre.cluster removed 5316 sequences.
+
+It took 21 secs to cluster 11484 sequences.
+
+Processing group ST_1F_T1_FLT:
+30753	14127	16626
+Total number of sequences before pre.cluster was 30753.
+pre.cluster removed 16626 sequences.
+
+It took 123 secs to cluster 30753 sequences.
+
+Processing group ST_2F_T1_FLT:
+19260	9105	10155
+Total number of sequences before pre.cluster was 19260.
+pre.cluster removed 10155 sequences.
+
+It took 50 secs to cluster 19260 sequences.
+
+Processing group ST_3F_T1_FLT:
+23547	10972	12575
+Total number of sequences before pre.cluster was 23547.
+pre.cluster removed 12575 sequences.
+
+It took 66 secs to cluster 23547 sequences.
+
+/******************************************/
+Running command: unique.seqs(fasta=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.fasta, name=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.names)
+233518	222570
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.unique.names
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.unique.fasta
+
+/******************************************/
+It took 981 secs to run pre.cluster.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.fasta
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.names
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_1F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_1F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_1U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_2F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_2F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_2U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_3F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_3F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CC_3U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CH_1F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CH_1U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CH_2F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CH_2U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CH_3F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.CH_3U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_1F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_1F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_1U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_2F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_2F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_2U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_3F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_3F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.HR_3U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_1F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_1F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_1U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_2F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_2F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_2U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_3F_T3_CCA.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_3F_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.PO_3U_T3_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.ST_1F_T1_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.ST_2F_T1_FLT.map
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.ST_3F_T1_FLT.map
+
+
+mothur > chimera.vsearch(fasta=current,name=current,group=current,processors=3,dereplicate=t)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.contigs.good.good.good.groups as input file for the group parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.names as input file for the name parameter.
+
+Using 3 processors.
+/Users/ZachQuinlan/Documents/mothur/mothurvsearch file does not exist. Checking path... 
+Found vsearch in your path, using /Users/ZachQuinlan/Documents/mothur/vsearch
+Checking sequences from Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.fasta ...
+
+It took 34 secs to check 12052 sequences from group CC_1F_T3_CCA.
+
+It took 9 secs to check 3182 sequences from group CC_1F_T3_FLT.
+
+It took 6 secs to check 2417 sequences from group CC_1U_T3_FLT.
+
+It took 50 secs to check 16773 sequences from group CC_2F_T3_CCA.
+
+It took 1 secs to check 317 sequences from group CC_2F_T3_FLT.
+
+It took 2 secs to check 676 sequences from group CC_2U_T3_FLT.
+
+It took 32 secs to check 11228 sequences from group CC_3F_T3_CCA.
+
+It took 5 secs to check 2123 sequences from group CC_3F_T3_FLT.
+
+It took 11 secs to check 4053 sequences from group CC_3U_T3_FLT.
+
+It took 2 secs to check 741 sequences from group CH_1F_T3_FLT.
+
+It took 5 secs to check 2253 sequences from group CH_1U_T3_FLT.
+
+It took 1 secs to check 430 sequences from group CH_2F_T3_FLT.
+
+It took 3 secs to check 1224 sequences from group CH_2U_T3_FLT.
+
+It took 1 secs to check 260 sequences from group CH_3F_T3_FLT.
+
+It took 6 secs to check 2721 sequences from group CH_3U_T3_FLT.
+
+It took 35 secs to check 12581 sequences from group HR_1F_T3_CCA.
+
+It took 10 secs to check 3451 sequences from group HR_1F_T3_FLT.
+
+It took 4 secs to check 1566 sequences from group HR_1U_T3_FLT.
+
+It took 34 secs to check 12495 sequences from group HR_2F_T3_CCA.
+
+It took 14 secs to check 4866 sequences from group HR_2F_T3_FLT.
+
+It took 9 secs to check 3605 sequences from group HR_2U_T3_FLT.
+
+It took 46 secs to check 16317 sequences from group HR_3F_T3_CCA.
+
+It took 4 secs to check 1511 sequences from group HR_3F_T3_FLT.
+
+It took 11 secs to check 4110 sequences from group HR_3U_T3_FLT.
+
+It took 34 secs to check 12395 sequences from group PO_1F_T3_CCA.
+
+It took 14 secs to check 4931 sequences from group PO_1F_T3_FLT.
+
+It took 12 secs to check 4443 sequences from group PO_1U_T3_FLT.
+
+It took 45 secs to check 15911 sequences from group PO_2F_T3_CCA.
+
+It took 14 secs to check 4985 sequences from group PO_2F_T3_FLT.
+
+It took 16 secs to check 5995 sequences from group PO_2U_T3_FLT.
+
+It took 46 secs to check 16322 sequences from group PO_3F_T3_CCA.
+
+It took 21 secs to check 7212 sequences from group PO_3F_T3_FLT.
+
+It took 17 secs to check 6168 sequences from group PO_3U_T3_FLT.
+
+It took 39 secs to check 14127 sequences from group ST_1F_T1_FLT.
+
+It took 23 secs to check 9105 sequences from group ST_2F_T1_FLT.
+
+It took 30 secs to check 10972 sequences from group ST_3F_T1_FLT.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.denovo.vsearch.chimeras
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.denovo.vsearch.accnos
+
+
+mothur > remove.seqs(fasta=current,name=current,group=current,accnos=current,dups=f)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.denovo.vsearch.accnos as input file for the accnos parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.contigs.good.good.good.groups as input file for the group parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.names as input file for the name parameter.
+Removed 4706 sequences from your name file.
+Removed 18039 sequences from your fasta file.
+Removed 25103 sequences from your group file.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.fasta
+Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.groups
+
+
+mothur > classify.seqs(fasta=current,name=current,group=current,template=SILVA.SEED.FULL.LTP.May2014.fasta,taxonomy=SILVA.SEED.FULL.LTP.May2014.species.taxonomy)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.fasta as input file for the fasta parameter.
+Using Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.groups as input file for the group parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names as input file for the name parameter.
+
+Using 3 processors.
+Generating search database...    DONE.
+It took 45 seconds generate search database. 
+
+Reading in the SILVA.SEED.FULL.LTP.May2014.species.taxonomy taxonomy...	HE978271.1.1527 has an error in the taxonomy.  This may be due to a ;;
+DONE.
+Calculating template taxonomy tree...     DONE.
+Calculating template probabilities...     DONE.
+It took 161 seconds get probabilities. 
+Classifying sequences from Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.fasta ...
+[WARNING]: M02308_195_000000000-B9BL6_1_1109_23605_3310 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M02308_195_000000000-B9BL6_1_2117_17206_3703 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M02308_195_000000000-B9BL6_1_1116_4959_4928 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M02308_195_000000000-B9BL6_1_2113_14754_19862 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M02308_195_000000000-B9BL6_1_1109_25063_6338 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M02308_195_000000000-B9BL6_1_1111_20335_7419 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M02308_195_000000000-B9BL6_1_2109_23916_16975 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+[WARNING]: M02308_195_000000000-B9BL6_1_1105_2364_9149 could not be classified. You can use the remove.lineage command with taxon=unknown; to remove such sequences.
+
+It took 52217 secs to classify 204531 sequences.
+
+Reading Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names...  Done.
+
+It took 17 secs to create the summary file for 204531 sequences.
+
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tax.summary
+
+
+mothur > phylotype(taxonomy=current,name=current)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names as input file for the name parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.taxonomy as input file for the taxonomy parameter.
+1
+2
+3
+4
+5
+6
+7
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.sabund
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.rabund
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.list
+
+
+mothur > classify.otu(taxonomy=current,name=current,list=current,cutoff=70,probs=f)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.list as input file for the list parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names as input file for the name parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.taxonomy as input file for the taxonomy parameter.
+1	1626
+2	1063
+3	539
+4	298
+5	135
+6	45
+7	3
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.cons.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.cons.tax.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.2.cons.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.2.cons.tax.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.3.cons.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.3.cons.tax.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.4.cons.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.4.cons.tax.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.5.cons.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.5.cons.tax.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.6.cons.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.6.cons.tax.summary
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.7.cons.taxonomy
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.7.cons.tax.summary
+
+
+mothur > make.shared(list=current,group=current)
+Using Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.groups as input file for the group parameter.
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.list as input file for the list parameter.
+1
+2
+3
+4
+5
+6
+7
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.shared
+
+
+mothur > filter.shared(shared=current,makerare=t,minpercent=0.0001,label=1-2-3-5)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.shared as input file for the shared parameter.
+1
+
+Removed 1192 OTUs.
+2
+
+Removed 698 OTUs.
+3
+
+Removed 316 OTUs.
+5
+
+Removed 75 OTUs.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.filter.shared
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.2.filter.shared
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.3.filter.shared
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.5.filter.shared
+
+
+mothur > get.relabund(shared=current,label=1-2-3-5)
+Using Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.filter.shared as input file for the shared parameter.
+1
+Your file does not include the label 2. Please refer to 1.
+Your file does not include the label 3. Please refer to 1.
+Your file does not include the label 5. Please refer to 1.
+
+Output File Names: 
+Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.filter.relabund
+
+
+mothur > set.dir(output=~/Documents/CRUSADE_sequencing/OTUs/,input=~/Documents/CRUSADE_sequencing/,tempdefault=~/Documents/mothur/)
+Mothur's directories:
+outputDir=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/
+inputDir=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/
+tempDefault=/Users/ZachQuinlan/Documents/mothur/
+
+mothur > set.current(fasta=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.fasta,name=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names,group=Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.groups,taxonomy=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.taxonomy,list=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.list,processors=3)
+
+Using 3 processors.
+
+Current files saved by mothur:
+accnos=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.denovo.vsearch.accnos
+fasta=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.fasta
+group=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.groups
+list=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.list
+name=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names
+oligos=CRUSADE.oligos.FEB2018Updated.txt
+qfile=Undetermined_S0_L001_R1_001.trim.contigs.qual
+rabund=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.rabund
+relabund=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.filter.relabund
+sabund=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.sabund
+shared=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.filter.shared
+taxonomy=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.taxonomy
+constaxonomy=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.1.cons.taxonomy
+contigsreport=Undetermined_S0_L001_R1_001.contigs.report
+processors=3
+summary=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.summary
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/current_files.summary
+
+
+mothur > remove.lineage(taxonomy=current,name=current,group=current,fasta=current,taxon=Bacteria;Cyanobacteria;Chloroplast;-unknown;)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.fasta as input file for the fasta parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.groups as input file for the group parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names as input file for the name parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.taxonomy as input file for the taxonomy parameter.
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.pick.taxonomy
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.names
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.fasta
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.pick.groups
+
+
+mothur > count.groups(group=current)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.pick.groups as input file for the group parameter.
+CC_1F_T3_CCA contains 22506.
+CC_1F_T3_FLT contains 8361.
+CC_1U_T3_FLT contains 6124.
+CC_2F_T3_CCA contains 30466.
+CC_2F_T3_FLT contains 439.
+CC_2U_T3_FLT contains 1215.
+CC_3F_T3_CCA contains 19696.
+CC_3F_T3_FLT contains 5630.
+CC_3U_T3_FLT contains 10828.
+CH_1F_T3_FLT contains 1993.
+CH_1U_T3_FLT contains 5202.
+CH_2F_T3_FLT contains 803.
+CH_2U_T3_FLT contains 2781.
+CH_3F_T3_FLT contains 582.
+CH_3U_T3_FLT contains 7896.
+HR_1F_T3_CCA contains 31042.
+HR_1F_T3_FLT contains 8955.
+HR_1U_T3_FLT contains 4030.
+HR_2F_T3_CCA contains 31419.
+HR_2F_T3_FLT contains 13294.
+HR_2U_T3_FLT contains 8763.
+HR_3F_T3_CCA contains 39139.
+HR_3F_T3_FLT contains 3642.
+HR_3U_T3_FLT contains 10347.
+PO_1F_T3_CCA contains 44183.
+PO_1F_T3_FLT contains 12165.
+PO_1U_T3_FLT contains 9781.
+PO_2F_T3_CCA contains 39157.
+PO_2F_T3_FLT contains 13009.
+PO_2U_T3_FLT contains 13526.
+PO_3F_T3_CCA contains 43749.
+PO_3F_T3_FLT contains 17230.
+PO_3U_T3_FLT contains 13620.
+ST_1F_T1_FLT contains 40539.
+ST_2F_T1_FLT contains 25686.
+ST_3F_T1_FLT contains 30347.
+
+Total seqs: 578145.
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.pick.count.summary
+
+
+mothur > sub.sample(size=2000,persample=true,fasta=current,name=current,group=current,taxonomy=current)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.fasta as input file for the fasta parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.pick.groups as input file for the group parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.names as input file for the name parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.pick.taxonomy as input file for the taxonomy parameter.
+You have selected a size that is larger than CC_2F_T3_FLT number of sequences, removing CC_2F_T3_FLT.
+You have selected a size that is larger than CC_2U_T3_FLT number of sequences, removing CC_2U_T3_FLT.
+You have selected a size that is larger than CH_1F_T3_FLT number of sequences, removing CH_1F_T3_FLT.
+You have selected a size that is larger than CH_2F_T3_FLT number of sequences, removing CH_2F_T3_FLT.
+You have selected a size that is larger than CH_3F_T3_FLT number of sequences, removing CH_3F_T3_FLT.
+Sampling 2000 from each group.
+Deconvoluting subsampled fasta file... 
+/******************************************/
+Running command: unique.seqs(fasta=/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.fasta)
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.names
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.unique.fasta
+
+/******************************************/
+Done.
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.names
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.pick.subsample.taxonomy
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.fasta
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.pick.subsample.groups
+
+
+mothur > dist.seqs(fasta=current,cutoff=0.1,processors=3)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.fasta as input file for the fasta parameter.
+
+Using 3 processors.
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.dist
+
+It took 1624 seconds to calculate the distances for 26160 sequences.
+
+mothur > cluster(column=current,name=current,method=opti)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.dist as input file for the column parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.names as input file for the name parameter.
+
+Using 3 processors.
+
+You did not set a cutoff, using 0.03.
+
+Clustering /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.dist
+
+
+iter	time	label	num_otus	cutoff	tp	tn	fp	fn	sensitivity	specificity	ppv	npv	fdr	accuracy	mcc	f1score
+0	0	0.03	26160	0.03	0	338710749	0	3448971	0	1	0	0.98992	0	0.98992	0	0	
+1	6	0.03	6677	0.03	3137200	338461264	249485	311771	0.909605	0.999263	0.926334	0.99908	0.0736664	0.99836	0.917103	0.917893	
+2	4	0.03	6507	0.03	3153507	338456246	254503	295464	0.914333	0.999249	0.925322	0.999128	0.0746779	0.998393	0.919	0.919795	
+3	5	0.03	6519	0.03	3153550	338456499	254250	295421	0.914345	0.999249	0.925392	0.999128	0.0746083	0.998394	0.919041	0.919835	
+
+
+It took 117 seconds to cluster
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.list
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.steps
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.sabund
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.rabund
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.sensspec
+
+
+mothur > classify.otu(taxonomy=current,list=current,name=current,label=0.03,cutoff=70,probs=f)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.list as input file for the list parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.names as input file for the name parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.pick.subsample.taxonomy as input file for the taxonomy parameter.
+0.03	6519
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.cons.taxonomy
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.cons.tax.summary
+
+
+mothur > make.shared(list=current,group=current)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.pick.subsample.groups as input file for the group parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.list as input file for the list parameter.
+0.03
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.shared
+
+
+mothur > get.relabund(shared=current,label=0.03)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.shared as input file for the shared parameter.
+0.03
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.relabund
+
+
+mothur > get.oturep(column=current,name=current,fasta=current,list=current,label=0.03)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.dist as input file for the column parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.fasta as input file for the fasta parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.list as input file for the list parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.names as input file for the name parameter.
+********************#****#****#****#****#****#****#****#****#****#****#
+Reading matrix:     |||||||||||||||||||||||||||||||||||||||||||||||||||
+***********************************************************************
+0.03	6519
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.names
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.fasta
+
+
+mothur > clearcut(fasta=current,DNA=T) 
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.fasta as input file for the fasta parameter.
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.tre
+
+
+mothur > unifrac.weighted(tree=current,group=current,name=current,distance=true,groups=all,random=false)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.pick.subsample.groups as input file for the group parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.names as input file for the name parameter.
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.tre as input file for the tree parameter.
+Options for distance are: lt, square, or column. Using lt.
+
+Using 3 processors.
+Tree#	Groups	WScore	
+1	CC_1F_T3_CCA-CC_1F_T3_FLT	0.61814
+1	CC_1F_T3_CCA-CC_1U_T3_FLT	0.481739
+1	CC_1F_T3_FLT-CC_1U_T3_FLT	0.477183
+1	CC_1F_T3_CCA-CC_2F_T3_CCA	0.209371
+1	CC_1F_T3_FLT-CC_2F_T3_CCA	0.631212
+1	CC_1U_T3_FLT-CC_2F_T3_CCA	0.498484
+1	CC_1F_T3_CCA-CC_3F_T3_CCA	0.216513
+1	CC_1F_T3_FLT-CC_3F_T3_CCA	0.62975
+1	CC_1U_T3_FLT-CC_3F_T3_CCA	0.485032
+1	CC_2F_T3_CCA-CC_3F_T3_CCA	0.193923
+1	CC_1F_T3_CCA-CC_3F_T3_FLT	0.574903
+1	CC_1F_T3_FLT-CC_3F_T3_FLT	0.3545
+1	CC_1U_T3_FLT-CC_3F_T3_FLT	0.435348
+1	CC_2F_T3_CCA-CC_3F_T3_FLT	0.590269
+1	CC_3F_T3_CCA-CC_3F_T3_FLT	0.585766
+1	CC_1F_T3_CCA-CC_3U_T3_FLT	0.488277
+1	CC_1F_T3_FLT-CC_3U_T3_FLT	0.445724
+1	CC_1U_T3_FLT-CC_3U_T3_FLT	0.160816
+1	CC_2F_T3_CCA-CC_3U_T3_FLT	0.503735
+1	CC_3F_T3_CCA-CC_3U_T3_FLT	0.498204
+1	CC_3F_T3_FLT-CC_3U_T3_FLT	0.414217
+1	CC_1F_T3_CCA-CH_1U_T3_FLT	0.485198
+1	CC_1F_T3_FLT-CH_1U_T3_FLT	0.674344
+1	CC_1U_T3_FLT-CH_1U_T3_FLT	0.335319
+1	CC_2F_T3_CCA-CH_1U_T3_FLT	0.497674
+1	CC_3F_T3_CCA-CH_1U_T3_FLT	0.484663
+1	CC_3F_T3_FLT-CH_1U_T3_FLT	0.626033
+1	CC_3U_T3_FLT-CH_1U_T3_FLT	0.365602
+1	CC_1F_T3_CCA-CH_2U_T3_FLT	0.483072
+1	CC_1F_T3_FLT-CH_2U_T3_FLT	0.674924
+1	CC_1U_T3_FLT-CH_2U_T3_FLT	0.341297
+1	CC_2F_T3_CCA-CH_2U_T3_FLT	0.500293
+1	CC_3F_T3_CCA-CH_2U_T3_FLT	0.487174
+1	CC_3F_T3_FLT-CH_2U_T3_FLT	0.62142
+1	CC_3U_T3_FLT-CH_2U_T3_FLT	0.371739
+1	CH_1U_T3_FLT-CH_2U_T3_FLT	0.0945953
+1	CC_1F_T3_CCA-CH_3U_T3_FLT	0.473989
+1	CC_1F_T3_FLT-CH_3U_T3_FLT	0.670309
+1	CC_1U_T3_FLT-CH_3U_T3_FLT	0.335975
+1	CC_2F_T3_CCA-CH_3U_T3_FLT	0.487564
+1	CC_3F_T3_CCA-CH_3U_T3_FLT	0.474665
+1	CC_3F_T3_FLT-CH_3U_T3_FLT	0.603913
+1	CC_3U_T3_FLT-CH_3U_T3_FLT	0.36416
+1	CH_1U_T3_FLT-CH_3U_T3_FLT	0.126452
+1	CH_2U_T3_FLT-CH_3U_T3_FLT	0.141373
+1	CC_1F_T3_CCA-HR_1F_T3_CCA	0.426149
+1	CC_1F_T3_FLT-HR_1F_T3_CCA	0.682382
+1	CC_1U_T3_FLT-HR_1F_T3_CCA	0.552271
+1	CC_2F_T3_CCA-HR_1F_T3_CCA	0.42547
+1	CC_3F_T3_CCA-HR_1F_T3_CCA	0.407868
+1	CC_3F_T3_FLT-HR_1F_T3_CCA	0.643109
+1	CC_3U_T3_FLT-HR_1F_T3_CCA	0.56739
+1	CH_1U_T3_FLT-HR_1F_T3_CCA	0.467765
+1	CH_2U_T3_FLT-HR_1F_T3_CCA	0.472144
+1	CH_3U_T3_FLT-HR_1F_T3_CCA	0.47601
+1	CC_1F_T3_CCA-HR_1F_T3_FLT	0.666067
+1	CC_1F_T3_FLT-HR_1F_T3_FLT	0.333871
+1	CC_1U_T3_FLT-HR_1F_T3_FLT	0.55175
+1	CC_2F_T3_CCA-HR_1F_T3_FLT	0.67216
+1	CC_3F_T3_CCA-HR_1F_T3_FLT	0.666254
+1	CC_3F_T3_FLT-HR_1F_T3_FLT	0.444739
+1	CC_3U_T3_FLT-HR_1F_T3_FLT	0.541861
+1	CH_1U_T3_FLT-HR_1F_T3_FLT	0.717429
+1	CH_2U_T3_FLT-HR_1F_T3_FLT	0.715532
+1	CH_3U_T3_FLT-HR_1F_T3_FLT	0.711251
+1	HR_1F_T3_CCA-HR_1F_T3_FLT	0.707848
+1	CC_1F_T3_CCA-HR_1U_T3_FLT	0.492702
+1	CC_1F_T3_FLT-HR_1U_T3_FLT	0.48456
+1	CC_1U_T3_FLT-HR_1U_T3_FLT	0.191168
+1	CC_2F_T3_CCA-HR_1U_T3_FLT	0.506698
+1	CC_3F_T3_CCA-HR_1U_T3_FLT	0.498939
+1	CC_3F_T3_FLT-HR_1U_T3_FLT	0.442986
+1	CC_3U_T3_FLT-HR_1U_T3_FLT	0.200312
+1	CH_1U_T3_FLT-HR_1U_T3_FLT	0.348543
+1	CH_2U_T3_FLT-HR_1U_T3_FLT	0.356077
+1	CH_3U_T3_FLT-HR_1U_T3_FLT	0.343789
+1	HR_1F_T3_CCA-HR_1U_T3_FLT	0.550138
+1	HR_1F_T3_FLT-HR_1U_T3_FLT	0.493983
+1	CC_1F_T3_CCA-HR_2F_T3_CCA	0.430711
+1	CC_1F_T3_FLT-HR_2F_T3_CCA	0.67513
+1	CC_1U_T3_FLT-HR_2F_T3_CCA	0.5512
+1	CC_2F_T3_CCA-HR_2F_T3_CCA	0.432449
+1	CC_3F_T3_CCA-HR_2F_T3_CCA	0.413521
+1	CC_3F_T3_FLT-HR_2F_T3_CCA	0.636181
+1	CC_3U_T3_FLT-HR_2F_T3_CCA	0.564396
+1	CH_1U_T3_FLT-HR_2F_T3_CCA	0.466903
+1	CH_2U_T3_FLT-HR_2F_T3_CCA	0.469656
+1	CH_3U_T3_FLT-HR_2F_T3_CCA	0.475573
+1	HR_1F_T3_CCA-HR_2F_T3_CCA	0.11933
+1	HR_1F_T3_FLT-HR_2F_T3_CCA	0.697311
+1	HR_1U_T3_FLT-HR_2F_T3_CCA	0.54151
+1	CC_1F_T3_CCA-HR_2F_T3_FLT	0.612133
+1	CC_1F_T3_FLT-HR_2F_T3_FLT	0.348439
+1	CC_1U_T3_FLT-HR_2F_T3_FLT	0.504214
+1	CC_2F_T3_CCA-HR_2F_T3_FLT	0.622616
+1	CC_3F_T3_CCA-HR_2F_T3_FLT	0.613498
+1	CC_3F_T3_FLT-HR_2F_T3_FLT	0.403858
+1	CC_3U_T3_FLT-HR_2F_T3_FLT	0.494038
+1	CH_1U_T3_FLT-HR_2F_T3_FLT	0.668684
+1	CH_2U_T3_FLT-HR_2F_T3_FLT	0.663847
+1	CH_3U_T3_FLT-HR_2F_T3_FLT	0.652351
+1	HR_1F_T3_CCA-HR_2F_T3_FLT	0.656718
+1	HR_1F_T3_FLT-HR_2F_T3_FLT	0.266798
+1	HR_1U_T3_FLT-HR_2F_T3_FLT	0.433583
+1	HR_2F_T3_CCA-HR_2F_T3_FLT	0.634113
+1	CC_1F_T3_CCA-HR_2U_T3_FLT	0.501564
+1	CC_1F_T3_FLT-HR_2U_T3_FLT	0.447289
+1	CC_1U_T3_FLT-HR_2U_T3_FLT	0.244503
+1	CC_2F_T3_CCA-HR_2U_T3_FLT	0.514664
+1	CC_3F_T3_CCA-HR_2U_T3_FLT	0.505119
+1	CC_3F_T3_FLT-HR_2U_T3_FLT	0.40971
+1	CC_3U_T3_FLT-HR_2U_T3_FLT	0.226932
+1	CH_1U_T3_FLT-HR_2U_T3_FLT	0.424244
+1	CH_2U_T3_FLT-HR_2U_T3_FLT	0.426615
+1	CH_3U_T3_FLT-HR_2U_T3_FLT	0.411335
+1	HR_1F_T3_CCA-HR_2U_T3_FLT	0.557663
+1	HR_1F_T3_FLT-HR_2U_T3_FLT	0.440965
+1	HR_1U_T3_FLT-HR_2U_T3_FLT	0.205397
+1	HR_2F_T3_CCA-HR_2U_T3_FLT	0.5495
+1	HR_2F_T3_FLT-HR_2U_T3_FLT	0.380889
+1	CC_1F_T3_CCA-HR_3F_T3_CCA	0.38779
+1	CC_1F_T3_FLT-HR_3F_T3_CCA	0.660751
+1	CC_1U_T3_FLT-HR_3F_T3_CCA	0.530557
+1	CC_2F_T3_CCA-HR_3F_T3_CCA	0.387649
+1	CC_3F_T3_CCA-HR_3F_T3_CCA	0.378301
+1	CC_3F_T3_FLT-HR_3F_T3_CCA	0.622526
+1	CC_3U_T3_FLT-HR_3F_T3_CCA	0.544594
+1	CH_1U_T3_FLT-HR_3F_T3_CCA	0.452615
+1	CH_2U_T3_FLT-HR_3F_T3_CCA	0.455127
+1	CH_3U_T3_FLT-HR_3F_T3_CCA	0.452567
+1	HR_1F_T3_CCA-HR_3F_T3_CCA	0.206072
+1	HR_1F_T3_FLT-HR_3F_T3_CCA	0.681916
+1	HR_1U_T3_FLT-HR_3F_T3_CCA	0.519941
+1	HR_2F_T3_CCA-HR_3F_T3_CCA	0.206271
+1	HR_2F_T3_FLT-HR_3F_T3_CCA	0.61901
+1	HR_2U_T3_FLT-HR_3F_T3_CCA	0.521903
+1	CC_1F_T3_CCA-HR_3F_T3_FLT	0.559498
+1	CC_1F_T3_FLT-HR_3F_T3_FLT	0.329259
+1	CC_1U_T3_FLT-HR_3F_T3_FLT	0.461047
+1	CC_2F_T3_CCA-HR_3F_T3_FLT	0.581545
+1	CC_3F_T3_CCA-HR_3F_T3_FLT	0.578302
+1	CC_3F_T3_FLT-HR_3F_T3_FLT	0.358078
+1	CC_3U_T3_FLT-HR_3F_T3_FLT	0.446371
+1	CH_1U_T3_FLT-HR_3F_T3_FLT	0.634865
+1	CH_2U_T3_FLT-HR_3F_T3_FLT	0.625083
+1	CH_3U_T3_FLT-HR_3F_T3_FLT	0.621612
+1	HR_1F_T3_CCA-HR_3F_T3_FLT	0.621568
+1	HR_1F_T3_FLT-HR_3F_T3_FLT	0.339396
+1	HR_1U_T3_FLT-HR_3F_T3_FLT	0.408452
+1	HR_2F_T3_CCA-HR_3F_T3_FLT	0.609081
+1	HR_2F_T3_FLT-HR_3F_T3_FLT	0.277016
+1	HR_2U_T3_FLT-HR_3F_T3_FLT	0.366853
+1	HR_3F_T3_CCA-HR_3F_T3_FLT	0.587789
+1	CC_1F_T3_CCA-HR_3U_T3_FLT	0.475794
+1	CC_1F_T3_FLT-HR_3U_T3_FLT	0.455439
+1	CC_1U_T3_FLT-HR_3U_T3_FLT	0.240504
+1	CC_2F_T3_CCA-HR_3U_T3_FLT	0.491418
+1	CC_3F_T3_CCA-HR_3U_T3_FLT	0.48093
+1	CC_3F_T3_FLT-HR_3U_T3_FLT	0.42861
+1	CC_3U_T3_FLT-HR_3U_T3_FLT	0.238243
+1	CH_1U_T3_FLT-HR_3U_T3_FLT	0.402046
+1	CH_2U_T3_FLT-HR_3U_T3_FLT	0.404324
+1	CH_3U_T3_FLT-HR_3U_T3_FLT	0.383738
+1	HR_1F_T3_CCA-HR_3U_T3_FLT	0.533625
+1	HR_1F_T3_FLT-HR_3U_T3_FLT	0.493499
+1	HR_1U_T3_FLT-HR_3U_T3_FLT	0.197425
+1	HR_2F_T3_CCA-HR_3U_T3_FLT	0.52384
+1	HR_2F_T3_FLT-HR_3U_T3_FLT	0.413142
+1	HR_2U_T3_FLT-HR_3U_T3_FLT	0.201893
+1	HR_3F_T3_CCA-HR_3U_T3_FLT	0.48655
+1	HR_3F_T3_FLT-HR_3U_T3_FLT	0.386614
+1	CC_1F_T3_CCA-PO_1F_T3_CCA	0.502316
+1	CC_1F_T3_FLT-PO_1F_T3_CCA	0.694255
+1	CC_1U_T3_FLT-PO_1F_T3_CCA	0.575152
+1	CC_2F_T3_CCA-PO_1F_T3_CCA	0.505578
+1	CC_3F_T3_CCA-PO_1F_T3_CCA	0.495894
+1	CC_3F_T3_FLT-PO_1F_T3_CCA	0.662106
+1	CC_3U_T3_FLT-PO_1F_T3_CCA	0.590812
+1	CH_1U_T3_FLT-PO_1F_T3_CCA	0.495809
+1	CH_2U_T3_FLT-PO_1F_T3_CCA	0.502752
+1	CH_3U_T3_FLT-PO_1F_T3_CCA	0.512365
+1	HR_1F_T3_CCA-PO_1F_T3_CCA	0.291131
+1	HR_1F_T3_FLT-PO_1F_T3_CCA	0.729452
+1	HR_1U_T3_FLT-PO_1F_T3_CCA	0.579492
+1	HR_2F_T3_CCA-PO_1F_T3_CCA	0.276095
+1	HR_2F_T3_FLT-PO_1F_T3_CCA	0.688918
+1	HR_2U_T3_FLT-PO_1F_T3_CCA	0.596295
+1	HR_3F_T3_CCA-PO_1F_T3_CCA	0.313757
+1	HR_3F_T3_FLT-PO_1F_T3_CCA	0.661455
+1	HR_3U_T3_FLT-PO_1F_T3_CCA	0.569899
+1	CC_1F_T3_CCA-PO_1F_T3_FLT	0.598006
+1	CC_1F_T3_FLT-PO_1F_T3_FLT	0.304808
+1	CC_1U_T3_FLT-PO_1F_T3_FLT	0.462201
+1	CC_2F_T3_CCA-PO_1F_T3_FLT	0.603635
+1	CC_3F_T3_CCA-PO_1F_T3_FLT	0.603675
+1	CC_3F_T3_FLT-PO_1F_T3_FLT	0.396375
+1	CC_3U_T3_FLT-PO_1F_T3_FLT	0.44427
+1	CH_1U_T3_FLT-PO_1F_T3_FLT	0.650581
+1	CH_2U_T3_FLT-PO_1F_T3_FLT	0.652371
+1	CH_3U_T3_FLT-PO_1F_T3_FLT	0.641295
+1	HR_1F_T3_CCA-PO_1F_T3_FLT	0.648085
+1	HR_1F_T3_FLT-PO_1F_T3_FLT	0.326659
+1	HR_1U_T3_FLT-PO_1F_T3_FLT	0.443885
+1	HR_2F_T3_CCA-PO_1F_T3_FLT	0.641158
+1	HR_2F_T3_FLT-PO_1F_T3_FLT	0.299597
+1	HR_2U_T3_FLT-PO_1F_T3_FLT	0.392558
+1	HR_3F_T3_CCA-PO_1F_T3_FLT	0.621225
+1	HR_3F_T3_FLT-PO_1F_T3_FLT	0.338325
+1	HR_3U_T3_FLT-PO_1F_T3_FLT	0.428845
+1	PO_1F_T3_CCA-PO_1F_T3_FLT	0.665113
+1	CC_1F_T3_CCA-PO_1U_T3_FLT	0.513584
+1	CC_1F_T3_FLT-PO_1U_T3_FLT	0.399608
+1	CC_1U_T3_FLT-PO_1U_T3_FLT	0.299364
+1	CC_2F_T3_CCA-PO_1U_T3_FLT	0.52433
+1	CC_3F_T3_CCA-PO_1U_T3_FLT	0.516048
+1	CC_3F_T3_FLT-PO_1U_T3_FLT	0.393856
+1	CC_3U_T3_FLT-PO_1U_T3_FLT	0.267131
+1	CH_1U_T3_FLT-PO_1U_T3_FLT	0.476313
+1	CH_2U_T3_FLT-PO_1U_T3_FLT	0.486186
+1	CH_3U_T3_FLT-PO_1U_T3_FLT	0.472693
+1	HR_1F_T3_CCA-PO_1U_T3_FLT	0.573181
+1	HR_1F_T3_FLT-PO_1U_T3_FLT	0.426999
+1	HR_1U_T3_FLT-PO_1U_T3_FLT	0.27834
+1	HR_2F_T3_CCA-PO_1U_T3_FLT	0.565076
+1	HR_2F_T3_FLT-PO_1U_T3_FLT	0.379194
+1	HR_2U_T3_FLT-PO_1U_T3_FLT	0.226535
+1	HR_3F_T3_CCA-PO_1U_T3_FLT	0.536497
+1	HR_3F_T3_FLT-PO_1U_T3_FLT	0.360264
+1	HR_3U_T3_FLT-PO_1U_T3_FLT	0.255972
+1	PO_1F_T3_CCA-PO_1U_T3_FLT	0.599989
+1	PO_1F_T3_FLT-PO_1U_T3_FLT	0.315182
+1	CC_1F_T3_CCA-PO_2F_T3_CCA	0.376056
+1	CC_1F_T3_FLT-PO_2F_T3_CCA	0.639638
+1	CC_1U_T3_FLT-PO_2F_T3_CCA	0.504827
+1	CC_2F_T3_CCA-PO_2F_T3_CCA	0.377572
+1	CC_3F_T3_CCA-PO_2F_T3_CCA	0.363809
+1	CC_3F_T3_FLT-PO_2F_T3_CCA	0.604263
+1	CC_3U_T3_FLT-PO_2F_T3_CCA	0.519425
+1	CH_1U_T3_FLT-PO_2F_T3_CCA	0.447083
+1	CH_2U_T3_FLT-PO_2F_T3_CCA	0.45342
+1	CH_3U_T3_FLT-PO_2F_T3_CCA	0.445265
+1	HR_1F_T3_CCA-PO_2F_T3_CCA	0.257891
+1	HR_1F_T3_FLT-PO_2F_T3_CCA	0.660581
+1	HR_1U_T3_FLT-PO_2F_T3_CCA	0.492677
+1	HR_2F_T3_CCA-PO_2F_T3_CCA	0.258669
+1	HR_2F_T3_FLT-PO_2F_T3_CCA	0.589353
+1	HR_2U_T3_FLT-PO_2F_T3_CCA	0.492294
+1	HR_3F_T3_CCA-PO_2F_T3_CCA	0.200596
+1	HR_3F_T3_FLT-PO_2F_T3_CCA	0.556933
+1	HR_3U_T3_FLT-PO_2F_T3_CCA	0.454715
+1	PO_1F_T3_CCA-PO_2F_T3_CCA	0.344446
+1	PO_1F_T3_FLT-PO_2F_T3_CCA	0.600347
+1	PO_1U_T3_FLT-PO_2F_T3_CCA	0.512478
+1	CC_1F_T3_CCA-PO_2F_T3_FLT	0.565265
+1	CC_1F_T3_FLT-PO_2F_T3_FLT	0.318313
+1	CC_1U_T3_FLT-PO_2F_T3_FLT	0.447141
+1	CC_2F_T3_CCA-PO_2F_T3_FLT	0.578218
+1	CC_3F_T3_CCA-PO_2F_T3_FLT	0.568486
+1	CC_3F_T3_FLT-PO_2F_T3_FLT	0.355244
+1	CC_3U_T3_FLT-PO_2F_T3_FLT	0.427142
+1	CH_1U_T3_FLT-PO_2F_T3_FLT	0.617501
+1	CH_2U_T3_FLT-PO_2F_T3_FLT	0.616579
+1	CH_3U_T3_FLT-PO_2F_T3_FLT	0.607735
+1	HR_1F_T3_CCA-PO_2F_T3_FLT	0.621302
+1	HR_1F_T3_FLT-PO_2F_T3_FLT	0.330455
+1	HR_1U_T3_FLT-PO_2F_T3_FLT	0.403671
+1	HR_2F_T3_CCA-PO_2F_T3_FLT	0.610223
+1	HR_2F_T3_FLT-PO_2F_T3_FLT	0.26943
+1	HR_2U_T3_FLT-PO_2F_T3_FLT	0.354846
+1	HR_3F_T3_CCA-PO_2F_T3_FLT	0.576601
+1	HR_3F_T3_FLT-PO_2F_T3_FLT	0.273642
+1	HR_3U_T3_FLT-PO_2F_T3_FLT	0.373008
+1	PO_1F_T3_CCA-PO_2F_T3_FLT	0.648997
+1	PO_1F_T3_FLT-PO_2F_T3_FLT	0.253822
+1	PO_1U_T3_FLT-PO_2F_T3_FLT	0.291701
+1	PO_2F_T3_CCA-PO_2F_T3_FLT	0.5509
+1	CC_1F_T3_CCA-PO_2U_T3_FLT	0.548701
+1	CC_1F_T3_FLT-PO_2U_T3_FLT	0.371105
+1	CC_1U_T3_FLT-PO_2U_T3_FLT	0.336075
+1	CC_2F_T3_CCA-PO_2U_T3_FLT	0.555979
+1	CC_3F_T3_CCA-PO_2U_T3_FLT	0.552823
+1	CC_3F_T3_FLT-PO_2U_T3_FLT	0.390261
+1	CC_3U_T3_FLT-PO_2U_T3_FLT	0.311002
+1	CH_1U_T3_FLT-PO_2U_T3_FLT	0.518965
+1	CH_2U_T3_FLT-PO_2U_T3_FLT	0.530717
+1	CH_3U_T3_FLT-PO_2U_T3_FLT	0.514903
+1	HR_1F_T3_CCA-PO_2U_T3_FLT	0.603952
+1	HR_1F_T3_FLT-PO_2U_T3_FLT	0.400552
+1	HR_1U_T3_FLT-PO_2U_T3_FLT	0.319354
+1	HR_2F_T3_CCA-PO_2U_T3_FLT	0.594574
+1	HR_2F_T3_FLT-PO_2U_T3_FLT	0.369759
+1	HR_2U_T3_FLT-PO_2U_T3_FLT	0.264371
+1	HR_3F_T3_CCA-PO_2U_T3_FLT	0.575246
+1	HR_3F_T3_FLT-PO_2U_T3_FLT	0.354329
+1	HR_3U_T3_FLT-PO_2U_T3_FLT	0.304059
+1	PO_1F_T3_CCA-PO_2U_T3_FLT	0.626973
+1	PO_1F_T3_FLT-PO_2U_T3_FLT	0.279907
+1	PO_1U_T3_FLT-PO_2U_T3_FLT	0.180564
+1	PO_2F_T3_CCA-PO_2U_T3_FLT	0.547343
+1	PO_2F_T3_FLT-PO_2U_T3_FLT	0.279962
+1	CC_1F_T3_CCA-PO_3F_T3_CCA	0.416999
+1	CC_1F_T3_FLT-PO_3F_T3_CCA	0.630552
+1	CC_1U_T3_FLT-PO_3F_T3_CCA	0.486388
+1	CC_2F_T3_CCA-PO_3F_T3_CCA	0.414305
+1	CC_3F_T3_CCA-PO_3F_T3_CCA	0.401975
+1	CC_3F_T3_FLT-PO_3F_T3_CCA	0.593419
+1	CC_3U_T3_FLT-PO_3F_T3_CCA	0.500227
+1	CH_1U_T3_FLT-PO_3F_T3_CCA	0.435372
+1	CH_2U_T3_FLT-PO_3F_T3_CCA	0.442726
+1	CH_3U_T3_FLT-PO_3F_T3_CCA	0.43622
+1	HR_1F_T3_CCA-PO_3F_T3_CCA	0.362443
+1	HR_1F_T3_FLT-PO_3F_T3_CCA	0.651254
+1	HR_1U_T3_FLT-PO_3F_T3_CCA	0.485074
+1	HR_2F_T3_CCA-PO_3F_T3_CCA	0.350373
+1	HR_2F_T3_FLT-PO_3F_T3_CCA	0.572306
+1	HR_2U_T3_FLT-PO_3F_T3_CCA	0.48832
+1	HR_3F_T3_CCA-PO_3F_T3_CCA	0.270938
+1	HR_3F_T3_FLT-PO_3F_T3_CCA	0.548198
+1	HR_3U_T3_FLT-PO_3F_T3_CCA	0.430326
+1	PO_1F_T3_CCA-PO_3F_T3_CCA	0.384702
+1	PO_1F_T3_FLT-PO_3F_T3_CCA	0.583456
+1	PO_1U_T3_FLT-PO_3F_T3_CCA	0.489846
+1	PO_2F_T3_CCA-PO_3F_T3_CCA	0.25329
+1	PO_2F_T3_FLT-PO_3F_T3_CCA	0.526134
+1	PO_2U_T3_FLT-PO_3F_T3_CCA	0.522536
+1	CC_1F_T3_CCA-PO_3F_T3_FLT	0.570027
+1	CC_1F_T3_FLT-PO_3F_T3_FLT	0.319027
+1	CC_1U_T3_FLT-PO_3F_T3_FLT	0.444309
+1	CC_2F_T3_CCA-PO_3F_T3_FLT	0.582032
+1	CC_3F_T3_CCA-PO_3F_T3_FLT	0.573137
+1	CC_3F_T3_FLT-PO_3F_T3_FLT	0.367523
+1	CC_3U_T3_FLT-PO_3F_T3_FLT	0.42086
+1	CH_1U_T3_FLT-PO_3F_T3_FLT	0.616623
+1	CH_2U_T3_FLT-PO_3F_T3_FLT	0.619312
+1	CH_3U_T3_FLT-PO_3F_T3_FLT	0.607599
+1	HR_1F_T3_CCA-PO_3F_T3_FLT	0.623022
+1	HR_1F_T3_FLT-PO_3F_T3_FLT	0.325254
+1	HR_1U_T3_FLT-PO_3F_T3_FLT	0.408957
+1	HR_2F_T3_CCA-PO_3F_T3_FLT	0.608682
+1	HR_2F_T3_FLT-PO_3F_T3_FLT	0.273364
+1	HR_2U_T3_FLT-PO_3F_T3_FLT	0.351751
+1	HR_3F_T3_CCA-PO_3F_T3_FLT	0.582817
+1	HR_3F_T3_FLT-PO_3F_T3_FLT	0.281802
+1	HR_3U_T3_FLT-PO_3F_T3_FLT	0.380426
+1	PO_1F_T3_CCA-PO_3F_T3_FLT	0.649043
+1	PO_1F_T3_FLT-PO_3F_T3_FLT	0.217482
+1	PO_1U_T3_FLT-PO_3F_T3_FLT	0.267388
+1	PO_2F_T3_CCA-PO_3F_T3_FLT	0.555887
+1	PO_2F_T3_FLT-PO_3F_T3_FLT	0.191058
+1	PO_2U_T3_FLT-PO_3F_T3_FLT	0.246604
+1	PO_3F_T3_CCA-PO_3F_T3_FLT	0.526737
+1	CC_1F_T3_CCA-PO_3U_T3_FLT	0.509622
+1	CC_1F_T3_FLT-PO_3U_T3_FLT	0.422353
+1	CC_1U_T3_FLT-PO_3U_T3_FLT	0.25834
+1	CC_2F_T3_CCA-PO_3U_T3_FLT	0.518583
+1	CC_3F_T3_CCA-PO_3U_T3_FLT	0.512115
+1	CC_3F_T3_FLT-PO_3U_T3_FLT	0.423161
+1	CC_3U_T3_FLT-PO_3U_T3_FLT	0.239622
+1	CH_1U_T3_FLT-PO_3U_T3_FLT	0.443114
+1	CH_2U_T3_FLT-PO_3U_T3_FLT	0.451978
+1	CH_3U_T3_FLT-PO_3U_T3_FLT	0.439098
+1	HR_1F_T3_CCA-PO_3U_T3_FLT	0.566734
+1	HR_1F_T3_FLT-PO_3U_T3_FLT	0.434608
+1	HR_1U_T3_FLT-PO_3U_T3_FLT	0.233435
+1	HR_2F_T3_CCA-PO_3U_T3_FLT	0.561865
+1	HR_2F_T3_FLT-PO_3U_T3_FLT	0.393005
+1	HR_2U_T3_FLT-PO_3U_T3_FLT	0.191654
+1	HR_3F_T3_CCA-PO_3U_T3_FLT	0.532713
+1	HR_3F_T3_FLT-PO_3U_T3_FLT	0.36765
+1	HR_3U_T3_FLT-PO_3U_T3_FLT	0.216571
+1	PO_1F_T3_CCA-PO_3U_T3_FLT	0.593568
+1	PO_1F_T3_FLT-PO_3U_T3_FLT	0.33596
+1	PO_1U_T3_FLT-PO_3U_T3_FLT	0.164366
+1	PO_2F_T3_CCA-PO_3U_T3_FLT	0.500283
+1	PO_2F_T3_FLT-PO_3U_T3_FLT	0.30711
+1	PO_2U_T3_FLT-PO_3U_T3_FLT	0.19329
+1	PO_3F_T3_CCA-PO_3U_T3_FLT	0.476858
+1	PO_3F_T3_FLT-PO_3U_T3_FLT	0.297178
+1	CC_1F_T3_CCA-ST_1F_T1_FLT	0.492178
+1	CC_1F_T3_FLT-ST_1F_T1_FLT	0.693784
+1	CC_1U_T3_FLT-ST_1F_T1_FLT	0.355343
+1	CC_2F_T3_CCA-ST_1F_T1_FLT	0.500264
+1	CC_3F_T3_CCA-ST_1F_T1_FLT	0.488467
+1	CC_3F_T3_FLT-ST_1F_T1_FLT	0.640771
+1	CC_3U_T3_FLT-ST_1F_T1_FLT	0.383059
+1	CH_1U_T3_FLT-ST_1F_T1_FLT	0.165638
+1	CH_2U_T3_FLT-ST_1F_T1_FLT	0.178506
+1	CH_3U_T3_FLT-ST_1F_T1_FLT	0.184394
+1	HR_1F_T3_CCA-ST_1F_T1_FLT	0.490826
+1	HR_1F_T3_FLT-ST_1F_T1_FLT	0.734231
+1	HR_1U_T3_FLT-ST_1F_T1_FLT	0.37713
+1	HR_2F_T3_CCA-ST_1F_T1_FLT	0.493696
+1	HR_2F_T3_FLT-ST_1F_T1_FLT	0.696039
+1	HR_2U_T3_FLT-ST_1F_T1_FLT	0.455583
+1	HR_3F_T3_CCA-ST_1F_T1_FLT	0.484851
+1	HR_3F_T3_FLT-ST_1F_T1_FLT	0.66561
+1	HR_3U_T3_FLT-ST_1F_T1_FLT	0.436193
+1	PO_1F_T3_CCA-ST_1F_T1_FLT	0.515202
+1	PO_1F_T3_FLT-ST_1F_T1_FLT	0.67367
+1	PO_1U_T3_FLT-ST_1F_T1_FLT	0.509002
+1	PO_2F_T3_CCA-ST_1F_T1_FLT	0.483966
+1	PO_2F_T3_FLT-ST_1F_T1_FLT	0.655337
+1	PO_2U_T3_FLT-ST_1F_T1_FLT	0.552255
+1	PO_3F_T3_CCA-ST_1F_T1_FLT	0.482084
+1	PO_3F_T3_FLT-ST_1F_T1_FLT	0.65868
+1	PO_3U_T3_FLT-ST_1F_T1_FLT	0.481091
+1	CC_1F_T3_CCA-ST_2F_T1_FLT	0.498803
+1	CC_1F_T3_FLT-ST_2F_T1_FLT	0.683994
+1	CC_1U_T3_FLT-ST_2F_T1_FLT	0.354976
+1	CC_2F_T3_CCA-ST_2F_T1_FLT	0.510384
+1	CC_3F_T3_CCA-ST_2F_T1_FLT	0.499012
+1	CC_3F_T3_FLT-ST_2F_T1_FLT	0.643144
+1	CC_3U_T3_FLT-ST_2F_T1_FLT	0.383607
+1	CH_1U_T3_FLT-ST_2F_T1_FLT	0.136054
+1	CH_2U_T3_FLT-ST_2F_T1_FLT	0.148083
+1	CH_3U_T3_FLT-ST_2F_T1_FLT	0.175346
+1	HR_1F_T3_CCA-ST_2F_T1_FLT	0.485395
+1	HR_1F_T3_FLT-ST_2F_T1_FLT	0.742555
+1	HR_1U_T3_FLT-ST_2F_T1_FLT	0.384408
+1	HR_2F_T3_CCA-ST_2F_T1_FLT	0.486636
+1	HR_2F_T3_FLT-ST_2F_T1_FLT	0.700235
+1	HR_2U_T3_FLT-ST_2F_T1_FLT	0.460227
+1	HR_3F_T3_CCA-ST_2F_T1_FLT	0.476989
+1	HR_3F_T3_FLT-ST_2F_T1_FLT	0.66351
+1	HR_3U_T3_FLT-ST_2F_T1_FLT	0.436028
+1	PO_1F_T3_CCA-ST_2F_T1_FLT	0.500603
+1	PO_1F_T3_FLT-ST_2F_T1_FLT	0.672791
+1	PO_1U_T3_FLT-ST_2F_T1_FLT	0.510887
+1	PO_2F_T3_CCA-ST_2F_T1_FLT	0.477273
+1	PO_2F_T3_FLT-ST_2F_T1_FLT	0.656847
+1	PO_2U_T3_FLT-ST_2F_T1_FLT	0.551629
+1	PO_3F_T3_CCA-ST_2F_T1_FLT	0.473502
+1	PO_3F_T3_FLT-ST_2F_T1_FLT	0.657566
+1	PO_3U_T3_FLT-ST_2F_T1_FLT	0.480794
+1	ST_1F_T1_FLT-ST_2F_T1_FLT	0.102077
+1	CC_1F_T3_CCA-ST_3F_T1_FLT	0.48624
+1	CC_1F_T3_FLT-ST_3F_T1_FLT	0.691758
+1	CC_1U_T3_FLT-ST_3F_T1_FLT	0.345015
+1	CC_2F_T3_CCA-ST_3F_T1_FLT	0.49227
+1	CC_3F_T3_CCA-ST_3F_T1_FLT	0.480778
+1	CC_3F_T3_FLT-ST_3F_T1_FLT	0.633665
+1	CC_3U_T3_FLT-ST_3F_T1_FLT	0.376722
+1	CH_1U_T3_FLT-ST_3F_T1_FLT	0.157474
+1	CH_2U_T3_FLT-ST_3F_T1_FLT	0.170151
+1	CH_3U_T3_FLT-ST_3F_T1_FLT	0.170006
+1	HR_1F_T3_CCA-ST_3F_T1_FLT	0.484375
+1	HR_1F_T3_FLT-ST_3F_T1_FLT	0.726396
+1	HR_1U_T3_FLT-ST_3F_T1_FLT	0.36541
+1	HR_2F_T3_CCA-ST_3F_T1_FLT	0.487166
+1	HR_2F_T3_FLT-ST_3F_T1_FLT	0.686264
+1	HR_2U_T3_FLT-ST_3F_T1_FLT	0.445473
+1	HR_3F_T3_CCA-ST_3F_T1_FLT	0.476176
+1	HR_3F_T3_FLT-ST_3F_T1_FLT	0.656317
+1	HR_3U_T3_FLT-ST_3F_T1_FLT	0.42564
+1	PO_1F_T3_CCA-ST_3F_T1_FLT	0.513708
+1	PO_1F_T3_FLT-ST_3F_T1_FLT	0.666979
+1	PO_1U_T3_FLT-ST_3F_T1_FLT	0.496876
+1	PO_2F_T3_CCA-ST_3F_T1_FLT	0.471762
+1	PO_2F_T3_FLT-ST_3F_T1_FLT	0.644619
+1	PO_2U_T3_FLT-ST_3F_T1_FLT	0.54473
+1	PO_3F_T3_CCA-ST_3F_T1_FLT	0.470272
+1	PO_3F_T3_FLT-ST_3F_T1_FLT	0.646559
+1	PO_3U_T3_FLT-ST_3F_T1_FLT	0.467816
+1	ST_1F_T1_FLT-ST_3F_T1_FLT	0.0871714
+1	ST_2F_T1_FLT-ST_3F_T1_FLT	0.109951
+It took 13 secs to run unifrac.weighted.
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.trewsummary
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.tre1.weighted.phylip.dist
+
+
+mothur > summary.shared(shared=current,label=0.03,distance=T,calc=braycurtis-thetayc-sharedsobs-sharedchao)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.shared as input file for the shared parameter.
+
+Using 3 processors.
+0.03
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.summary
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.braycurtis.0.03.lt.dist
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.thetayc.0.03.lt.dist
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.sharedsobs.0.03.lt.dist
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.sharedchao.0.03.lt.dist
+
+
+mothur > nmds(phylip=current) 
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.tre1.weighted.phylip.dist as input file for the phylip parameter.
+Processing Dimension: 2
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Number of dimensions:	2
+Lowest stress :	0.186255
+R-squared for configuration:	0.898759
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.tre1.weighted.phylip.nmds.iters
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.tre1.weighted.phylip.nmds.stress
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.0.03.rep.tre1.weighted.phylip.nmds.axes
+
+
+mothur > rarefaction.single(shared=current)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.shared as input file for the shared parameter.
+
+Using 3 processors.
+
+Processing group CC_1F_T3_CCA
+
+0.03
+
+Processing group CC_1F_T3_FLT
+
+0.03
+
+Processing group CC_1U_T3_FLT
+
+0.03
+
+Processing group CC_2F_T3_CCA
+
+0.03
+
+Processing group CC_3F_T3_CCA
+
+0.03
+
+Processing group CC_3F_T3_FLT
+
+0.03
+
+Processing group CC_3U_T3_FLT
+
+0.03
+
+Processing group CH_1U_T3_FLT
+
+0.03
+
+Processing group CH_2U_T3_FLT
+
+0.03
+
+Processing group CH_3U_T3_FLT
+
+0.03
+
+Processing group HR_1F_T3_CCA
+
+0.03
+
+Processing group HR_1F_T3_FLT
+
+0.03
+
+Processing group HR_1U_T3_FLT
+
+0.03
+
+Processing group HR_2F_T3_CCA
+
+0.03
+
+Processing group HR_2F_T3_FLT
+
+0.03
+
+Processing group HR_2U_T3_FLT
+
+0.03
+
+Processing group HR_3F_T3_CCA
+
+0.03
+
+Processing group HR_3F_T3_FLT
+
+0.03
+
+Processing group HR_3U_T3_FLT
+
+0.03
+
+Processing group PO_1F_T3_CCA
+
+0.03
+
+Processing group PO_1F_T3_FLT
+
+0.03
+
+Processing group PO_1U_T3_FLT
+
+0.03
+
+Processing group PO_2F_T3_CCA
+
+0.03
+
+Processing group PO_2F_T3_FLT
+
+0.03
+
+Processing group PO_2U_T3_FLT
+
+0.03
+
+Processing group PO_3F_T3_CCA
+
+0.03
+
+Processing group PO_3F_T3_FLT
+
+0.03
+
+Processing group PO_3U_T3_FLT
+
+0.03
+
+Processing group ST_1F_T1_FLT
+
+0.03
+
+Processing group ST_2F_T1_FLT
+
+0.03
+
+Processing group ST_3F_T1_FLT
+
+0.03
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.groups.rarefaction
+
+
+mothur > summary.single(shared=current,label=0.03,calc=nseqs-sobs-chao-shannon-shannoneven)
+Using /Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.shared as input file for the shared parameter.
+
+Processing group CC_1F_T3_CCA
+
+0.03
+
+Processing group CC_1F_T3_FLT
+
+0.03
+
+Processing group CC_1U_T3_FLT
+
+0.03
+
+Processing group CC_2F_T3_CCA
+
+0.03
+
+Processing group CC_3F_T3_CCA
+
+0.03
+
+Processing group CC_3F_T3_FLT
+
+0.03
+
+Processing group CC_3U_T3_FLT
+
+0.03
+
+Processing group CH_1U_T3_FLT
+
+0.03
+
+Processing group CH_2U_T3_FLT
+
+0.03
+
+Processing group CH_3U_T3_FLT
+
+0.03
+
+Processing group HR_1F_T3_CCA
+
+0.03
+
+Processing group HR_1F_T3_FLT
+
+0.03
+
+Processing group HR_1U_T3_FLT
+
+0.03
+
+Processing group HR_2F_T3_CCA
+
+0.03
+
+Processing group HR_2F_T3_FLT
+
+0.03
+
+Processing group HR_2U_T3_FLT
+
+0.03
+
+Processing group HR_3F_T3_CCA
+
+0.03
+
+Processing group HR_3F_T3_FLT
+
+0.03
+
+Processing group HR_3U_T3_FLT
+
+0.03
+
+Processing group PO_1F_T3_CCA
+
+0.03
+
+Processing group PO_1F_T3_FLT
+
+0.03
+
+Processing group PO_1U_T3_FLT
+
+0.03
+
+Processing group PO_2F_T3_CCA
+
+0.03
+
+Processing group PO_2F_T3_FLT
+
+0.03
+
+Processing group PO_2U_T3_FLT
+
+0.03
+
+Processing group PO_3F_T3_CCA
+
+0.03
+
+Processing group PO_3F_T3_FLT
+
+0.03
+
+Processing group PO_3U_T3_FLT
+
+0.03
+
+Processing group ST_1F_T1_FLT
+
+0.03
+
+Processing group ST_2F_T1_FLT
+
+0.03
+
+Processing group ST_3F_T1_FLT
+
+0.03
+
+Output File Names: 
+/Users/ZachQuinlan/Documents/CRUSADE_sequencing/OTUs/Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.pick.subsample.opti_mcc.groups.summary
+
+
+mothur > quit()
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Detected 4 [WARNING] messages, please review.
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<^>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

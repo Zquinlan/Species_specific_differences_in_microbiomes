@@ -1,0 +1,70 @@
+#making contigs
+make.contigs(ffastq=Undetermined_S0_L001_R1_001.fastq,rfastq=Undetermined_S0_L001_R2_001.fastq,findex=Undetermined_S0_L001_I1_001.fastq,rindex=Undetermined_S0_L001_I2_001.fastq,oligos=CRUSADE.oligos.FEB2018Updated.txt,bdiffs=1,checkorient=t,processors=3)
+
+#Screening contigs/seqs
+screen.seqs(fasta=current,group=current,optimize=minoverlap-mismatches,criteria=95,contigsreport=current)
+get.current()
+summary.seqs(fasta=current,processors=3)
+screen.seqs(fasta=current,group=current,maxambig=2,maxhomop=10,minlength=400,optimize=maxlength, criteria=95,summary=current)
+
+summary.seqs(fasta=current)
+
+#Dereplication step
+unique.seqs(fasta=current)
+summary.seqs(fasta=current,name=current)
+
+#align to SILVA
+count.groups(group=current)
+align.seqs(fasta=current,reference=SILVA.SEED.FULL.LTP.May2014.fasta,processors=3,flip=t)
+filter.seqs(fasta=current)
+summary.seqs(fasta=current,name=current)
+screen.seqs(fasta=current,name=current,group=current,optimize=start-end,criteria=99,summary=current)
+count.groups(group=current)
+
+#Smooth out the wrinkles
+pre.cluster(fasta=current,name=current,group=current,diffs=2,processors=3)
+
+#Chimeras
+chimera.vsearch(fasta=current,name=current,group=current,processors=3,dereplicate=t)
+remove.seqs(fasta=current,name=current,group=current,accnos=current,dups=f)
+
+#Classify
+classify.seqs(fasta=current,name=current,group=current,template=SILVA.SEED.FULL.LTP.May2014.fasta,taxonomy=SILVA.SEED.FULL.LTP.May2014.species.taxonomy)
+
+#Phylotype
+phylotype(taxonomy=current,name=current)
+classify.otu(taxonomy=current,name=current,list=current,cutoff=70,probs=f)
+make.shared(list=current,group=current)
+filter.shared(shared=current,makerare=t,minpercent=0.0001,label=1-2-3-5)
+get.relabund(shared=current,label=1-2-3-5)
+
+#Starting to get more bioinformaticky weeeeeeee
+set.dir(output=~/Documents/CRUSADE_sequencing/OTUs/,input=~/Documents/CRUSADE_sequencing/,tempdefault=~/Documents/mothur/)
+set.current(fasta=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.fasta,name=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.names,group=Undetermined_S0_L001_R1_001.contigs.good.good.good.pick.groups,taxonomy=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.taxonomy,list=Undetermined_S0_L001_R1_001.trim.contigs.good.good.unique.filter.good.precluster.pick.species.wang.tx.list,processors=3)
+
+#removing unknowns and chloroplasts
+remove.lineage(taxonomy=current,name=current,group=current,fasta=current,taxon=Bacteria;Cyanobacteria;Chloroplast;-unknown;)
+
+count.groups(group=current)
+
+#SUBSAMPLING CHANGE THE SIZE BASED OFF OF COUNT.GROUPS (you want to make it high but dont want to eliminate too many samples)
+sub.sample(size=2000,persample=true,fasta=current,name=current,group=current,taxonomy=current)
+
+dist.seqs(fasta=current,cutoff=0.1,processors=3)
+cluster(column=current,name=current,method=opti)
+
+#Classifying and making spreadsheet
+classify.otu(taxonomy=current,list=current,name=current,label=0.03,cutoff=70,probs=f)
+make.shared(list=current,group=current)
+get.relabund(shared=current,label=0.03)
+
+#Extra modeling, nmds, etc.
+get.oturep(column=current,name=current,fasta=current,list=current,label=0.03)
+clearcut(fasta=current,DNA=T) 
+unifrac.weighted(tree=current,group=current,name=current,distance=true,groups=all,random=false)
+
+summary.shared(shared=current,label=0.03,distance=T,calc=braycurtis-thetayc-sharedsobs-sharedchao)
+
+nmds(phylip=current) 
+rarefaction.single(shared=current)
+summary.single(shared=current,label=0.03,calc=nseqs-sobs-chao-shannon-shannoneven)
