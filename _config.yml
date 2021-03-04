@@ -3,8 +3,7 @@ logo: https://lh3.googleusercontent.com/RD0ErQuJ64dlWqhBNoTBGx6xfVouzwrq4frafPuj
 title: Species-specific differences in the microbiomes and organic exudates of crustose coralline algae influence bacterioplankton communities
 
 toc2:
-  - title: [Code](https://github.com/Zquinlan/Species_specific_differences_in_microbiomes/tree/master/Code)
-  - title: [Data](https://github.com/Zquinlan/Species_specific_differences_in_microbiomes/tree/master/Data)
+  - title: Data
   subfolderitems:
     - page: Microbial samples
       url: https://github.com/Zquinlan/Species_specific_differences_in_microbiomes/tree/master/Data/Microbial%20samples
