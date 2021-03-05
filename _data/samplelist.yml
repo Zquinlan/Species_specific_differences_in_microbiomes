@@ -1,13 +1,5 @@
-docs_list_title: DORCIERR subfolders
+docs_list_title: Repository subfolders
 docs:
 
 - title: Microbial samples
   url: https://github.com/Zquinlan/Species_specific_differences_in_microbiomes/tree/master/Data/Microbial%20samples
-
-
-<h2>{{ site.data.samplelist.docs_list_title }}</h2>
-<ul>
-   {% for item in site.data.samplelist.docs %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-   {% endfor %}
-</ul>
