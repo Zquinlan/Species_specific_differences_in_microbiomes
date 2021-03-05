@@ -1,5 +1,5 @@
 toc2:
-  - title: Data
-  subfolderitems:
-    - page: Microbial samples
-      url: https://github.com/Zquinlan/Species_specific_differences_in_microbiomes/tree/master/Data/Microbial%20samples
+- title: Data
+subfolderitems:
+- page: Microbial samples
+url: https://github.com/Zquinlan/Species_specific_differences_in_microbiomes/tree/master/Data/Microbial%20samples
